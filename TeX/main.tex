@@ -1,0 +1,64 @@
+%! Author = sbbfti
+%! Date = 10/06/2020
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+% \documentclass[final,1p,times,nonatbib]{elsarticle-deutsch}
+% \documentclass[final,1p,times,twocolumn,nonatbib]{elsarticle-deutsch}
+%% \documentclass[final,3p,times,nonatbib]{elsarticle-deutsch}
+% \documentclass[final,3p,times,twocolumn,nonatbib]{elsarticle-deutsch}
+%% \documentclass[final,5p,times,nonatbib]{elsarticle-deutsch}
+\documentclass[final,5p,times,twocolumn,nonatbib]{elsarticle-deutsch}
+
+% \documentclass[ngerman,final,3p,times,nonatbib]{elsarticle-deutsch}
+
+\usepackage{setspace}
+\usepackage{mypreamble}
+
+\input{Konfigurationsdateien/myglossary.tex}
+
+\begin{document}
+    
+    \onehalfspacing
+
+    \input{Hauptkapitel/titleAbstract}
+    % \tableofcontents
+    % \cleardoublepage
+    
+    
+    %% The lineno packages adds line numbers. Start line numbering with
+    %% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+    %% for the whole article with \linenumbers.
+    % \usepackage{lineno}
+    
+    % \linenumbers
+    
+    \acresetall
+    
+    \input{Hauptkapitel/01Einleitung}
+    
+    % \newpage
+    \input{Hauptkapitel/02Theorie}
+    
+    \input{Hauptkapitel/03Material und Methoden}
+
+    % \input{Hauptkapitel/04Ergebnisse}
+
+    \input{Hauptkapitel/04Diskussion}
+    
+    % \clearpage
+    
+    \input{Konfigurationsdateien/myacronyms.tex}
+
+    % \printnoidxglossaries
+
+    \printbibliography
+
+    % \clearpage
+
+    % \input{Hauptkapitel/Anhang}
+
+\end{document}

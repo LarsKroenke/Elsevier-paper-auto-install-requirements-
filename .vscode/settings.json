@@ -1,0 +1,23 @@
+{
+    "editor.fontSize": 13,
+    "editor.minimap.enabled": false,
+    "editor.lineHeight": 1.8,
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "Maple Mono NF, 'Maple Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    // "python.defaultInterpreterPath": "/usr/local/bin/python",
+    "python.linting.enabled": true,
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.intellisense.citation.backend": "biblatex",
+    "latex-workshop.latex.outDir": "%DIR%/~build",
+    "latex-workshop.view.pdf.color.dark.backgroundColor": "#000000",
+    "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#000000",
+    "latex-workshop.view.pdf.color.light.backgroundColor": "#000000",
+    "latex-workshop.message.error.show": false,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "zarp-icons",
+    "workbench.editor.showTabs": "none",
+    "breadcrumbs.enabled": false,
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": []
+}

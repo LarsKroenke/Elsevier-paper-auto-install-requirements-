@@ -1,0 +1,238 @@
+% --------------------------------------------------
+% Sprach- und Kodierungseinstellungen
+% --------------------------------------------------
+
+\ProvidesPackage{mypreamble}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}  % Für ältere LaTeX-Installationen
+\usepackage[ngerman]{babel}
+\usepackage[german=quotes]{csquotes}
+
+% --------------------------------------------------
+% Schrift und Layout
+% --------------------------------------------------
+
+\usepackage{blindtext}
+% \usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{ragged2e}
+\raggedbottom
+
+% --------------------------------------------------
+% Seitenstil und Kopf-/Fußzeile
+% --------------------------------------------------
+
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{lastpage}
+\definecolor{elseviergray}{rgb}{0.6,0.6,0.6}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape\leftmark}
+\fancyhead[R]{\thepage \ von \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{elseviergray}\leaders\hrule height \headrulewidth\hfill}}
+% No footer line
+\renewcommand{\footrulewidth}{0pt}
+% \fancyfoot[C]{\thepage}  
+
+% --------------------------------------------------
+% Nummerierung, Hyperlinks, Import
+% --------------------------------------------------
+
+\usepackage{lineno}
+\modulolinenumbers[5]
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    pdftitle={Simulation der Phosgensynthese aus Kohlenstoffmonoxid und Chlor an einem Kohlekatalysator: Optimierung der Betriebsbedingungen im Rohrreaktor},
+    pdfsubject={Modellierung Chemischer Reaktoren},
+    pdfauthor={Lars Krönke},
+    pdfkeywords={Phosgensynthese, Matlab/Simulink, Prozessmodellierung, Festbettreaktor},
+}
+
+\usepackage{import}
+\urlstyle{same}
+
+% --------------------------------------------------
+% Tabellen und Listen
+% --------------------------------------------------
+
+\usepackage{booktabs, tabularx, wrapfig, array, ltablex, multirow, longtable, placeins, float, adjustbox}
+\usepackage{csvsimple}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+% Globale Caption-Einstellungen (vermeidet Option-Clash)
+\captionsetup{labelfont={bf}}
+\captionsetup{labelfont={bf}, labelsep=colon, singlelinecheck=off}
+\captionsetup[figure]{justification=raggedright,format=plain, size=footnotesize}
+\captionsetup[table]{justification=raggedright, size=footnotesize}
+\addto\captionsngerman{\renewcommand{\figurename}{Abb.}}
+\addto\captionsngerman{\renewcommand{\tablename}{Tab.}}
+
+% --------------------------------------------------
+% Mathematik und Einheiten
+% --------------------------------------------------
+
+\usepackage{amsmath}
+\usepackage{siunitx}
+% \sisetup{
+%     locale=DE, % Deutsche Sprache
+%     %table-alignment-mode=format,
+%     detect-all, % Einheiten und Zahlen im Text
+%     per-mode=single-symbol, % Einheiten mit Symbolen
+%     table-number-alignment = center, % Tabellenformatierung
+%     % table-alignment=center,
+%     drop-zero-decimal, % Entfernt unnötige Nullen
+%     scientific-notation, % Wissenschaftliche Notation
+%     % round-mode=figures,
+%     % round-mode=places,
+%     % round-precision=7,
+%     round-pad=false,
+%     % mode=text,
+%     % unit-font-command=\mathsf,
+% }
+
+% open file containing variables
+\usepackage{datatool}
+\DTLsetseparator{;}
+\DTLloaddb[noheader, keys={key,value}]{_variables}{Formeln/_variables.dat}
+\newcommand{\var}[1]{\DTLfetch{_variables}{key}{#1}{value}}
+
+
+% --------------------------------------------------
+% Quellcode-Listings
+% --------------------------------------------------
+
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeorange}{rgb}{1,0.49,0}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.96}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegray},
+    keywordstyle=\color{codeorange},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codegreen},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    xleftmargin=10pt,
+}
+\lstset{style=mystyle, basicstyle=\fontsize{6}{6}\selectfont\ttfamily}
+\renewcommand\lstlistingname{Source Code}
+\renewcommand\lstlistlistingname{Source Code}
+
+% --------------------------------------------------
+% Grafiken und Diagramme
+% --------------------------------------------------
+
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9, width=10cm, height=8cm}
+\maxdeadcycles=1000
+
+\def\mathdefault#1{#1}
+\everymath=\expandafter{\the\everymath\displaystyle}
+
+% --------------------------------------------------
+% Zeichnungen und Schemata
+% --------------------------------------------------
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, chains, positioning, quotes, calc}
+\tikzset{
+    arr/.style = {draw, -Latex},
+    every edge/.style = {arr},
+    dot/.style = {circle, fill, inner sep=1.5pt},
+    every edge quotes/.append style = {auto, font=\small},
+    sum/.style = {draw, circle, inner sep=2pt}
+}
+\usepackage{circuitikz}
+\usepackage{chemplants}
+
+% --------------------------------------------------
+% Chemie
+% --------------------------------------------------
+
+\usepackage{mol2chemfig}
+\usepackage[version=4,arrows=pgf]{mhchem}
+\usepackage{chemfig}
+\setchemfig{atom sep=2em, cram width=5pt}
+\input{Konfigurationsdateien/compounds.tex}
+
+% --------------------------------------------------
+% Glossar, Akronyme, Hervorhebungen
+% --------------------------------------------------
+
+\usepackage[nonumberlist,nogroupskip]{glossaries}
+\setglossarystyle{super}
+\usepackage[printonlyused]{acronym}
+\usepackage{color,soul}
+\DeclareRobustCommand{\hlc}[1]{{\sethlcolor{lightgray}\hl{#1}}}
+
+% --------------------------------------------------
+% Kapitelüberschriften
+% --------------------------------------------------
+
+\usepackage{titlesec}
+\titlelabel{\thetitle\hspace{6pt}}
+
+% --------------------------------------------------
+% Literaturverzeichnis
+% --------------------------------------------------
+
+% Beispiel für verschiedene Stile (nur einen aktivieren)
+%\bibliographystyle{model1-num-names}
+%\bibliographystyle{model1a-num-names}
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+%\bibliographystyle{elsarticle-num}
+
+% Aktueller Stil
+% \bibliographystyle{IEEEtran}
+
+% \newcommand\mycite[1]{%
+%     \citeauthor{#1}~(\citeyear{#1})}
+
+% BibLaTeX %
+\usepackage[
+    backend=biber, % Backend für BibLaTeX
+    style=ieee, % Zitierstil
+    sorting=nty, % Sortierung der Einträge
+    defernumbers=true % Sortierung der Einträge
+]{biblatex}
+\addbibresource{Literatur.bib} % BibLaTeX-Datenbank
+\DefineBibliographyStrings{german}{andothers = {et al.}} % "et al." für mehrere Autoren
+
+
+% --------------------------------------------------
+% Sonstiges
+% --------------------------------------------------
+
+% Schusterjunge und Hurenkind vermeiden
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+\emergencystretch 5em%
+
+% Journal (Beispiel)
+\journal{Modellierung chemischer Reaktoren}
+
+\usepackage{wallpaper}
+% \CenterWallPaper{1.2}{Konfigurationsdateien/pergament.jpeg}

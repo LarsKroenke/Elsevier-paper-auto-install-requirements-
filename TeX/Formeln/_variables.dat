@@ -1,0 +1,4 @@
+cstd;\SI[round-mode=figures, round-precision=4]{17.50989626975642}{\nano\gram\per\micro\liter}
+mmeoh;\SI[]{6.3158}{\gram}
+mbtex;\SI[]{0.606}{\gram}
+btexref;\SI[]{200}{\nano\gram\per\micro\liter}
