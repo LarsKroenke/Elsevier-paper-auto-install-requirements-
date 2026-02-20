@@ -27,5 +27,6 @@ python3 -m venv .venv
   pint-pandas \
   latexify-py \
   scienceplots \
-  mol2chemfigPy3
+  pyperclip \
+  mol2chemfigPy3 
 
