@@ -14,7 +14,7 @@
     "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#000000",
     "latex-workshop.view.pdf.color.light.backgroundColor": "#000000",
     "latex-workshop.message.error.show": false,
-    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.colorTheme": "Catppuccin Macchiato",
     "workbench.iconTheme": "zarp-icons",
     "workbench.editor.showTabs": "none",
     "breadcrumbs.enabled": false,
