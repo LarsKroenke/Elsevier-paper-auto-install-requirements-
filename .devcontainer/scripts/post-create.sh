@@ -15,11 +15,10 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
 brew install --cask font-maple-mono
 
-python -m venv .venv
-.venv/bin/pip install --upgrade pip ipykernel
+python3 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip ipykernel
 
-python3 -m pip install --upgrade pip
-pip install \
+.venv/bin/python -m pip install \
   pandas \
   numpy \
   matplotlib \
