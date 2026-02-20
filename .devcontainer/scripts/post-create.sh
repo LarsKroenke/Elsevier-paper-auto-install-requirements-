@@ -15,6 +15,9 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
 brew install --cask font-maple-mono
 
+python -m venv .venv
+.venv/bin/pip install --upgrade pip ipykernel
+
 python3 -m pip install --upgrade pip
 pip install \
   pandas \
@@ -27,5 +30,3 @@ pip install \
   scienceplots \
   mol2chemfigPy3
 
-python -m venv .venv
-.venv/bin/pip install --upgrade pip ipykernel

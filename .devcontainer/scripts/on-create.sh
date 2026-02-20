@@ -9,7 +9,7 @@ sudo apt-get install -y \
   texlive-bibtex-extra \
   biber \
   latexmk \
-  texlive-lang-german \
-  texlive-latex-base texlive-latex-recommended texlive-fonts-recommended \
-  dvipng cm-super texlive-pictures \
-  texlive-latex-extra texlive-fonts-extra dvisvgm ghostscript 
+  texlive-lang-german 
+  # texlive-latex-base texlive-latex-recommended texlive-fonts-recommended \
+  # dvipng cm-super texlive-pictures \
+  # texlive-latex-extra texlive-fonts-extra dvisvgm ghostscript 
