@@ -7,17 +7,29 @@
     "editor.fontLigatures": true,
     "python.defaultInterpreterPath": ".venv/bin/python",
     "python.linting.enabled": true,
-    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.intellisense.citation.backend": "biblatex",
     "latex-workshop.latex.outDir": "%DIR%/~build",
     "latex-workshop.view.pdf.color.dark.backgroundColor": "#000000",
     "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#000000",
     "latex-workshop.view.pdf.color.light.backgroundColor": "#000000",
     "latex-workshop.message.error.show": false,
+    "latex-workshop.bibtex-format.sort.enabled": true,
+    "latex-workshop.intellisense.citation.filterText": [
+        "title",
+        "other fields"
+    ],
     "workbench.colorTheme": "Catppuccin Noir",
     "workbench.iconTheme": "catppuccin-macchiato",
     "workbench.editor.showTabs": "none",
     "breadcrumbs.enabled": false,
-    "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python-envs.pythonProjects": []
+    // "python-envs.defaultEnvManager": "ms-python.python:system",
+    // "python-envs.pythonProjects": [],
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
 }
