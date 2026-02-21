@@ -17,8 +17,7 @@
         "AlexDo.catppuccin-noir"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-        "editor.fontFamily": "'Maple Mono Italic', 'Maple Mono', monospace"
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
       }
     }
   },
