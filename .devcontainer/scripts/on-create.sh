@@ -41,4 +41,5 @@ python3 -m venv .venv
   latexify-py \
   scienceplots \
   pyperclip \
-  mol2chemfigPy3 
+  mol2chemfigPy3\
+  jinja2

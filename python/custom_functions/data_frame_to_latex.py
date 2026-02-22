@@ -195,7 +195,7 @@ def df_to_tex(df,
     # adjustbox argument
     if adjustbox:
         latex_table = latex_table.splitlines()
-        latex_table.insert(4, fr'\begin{{adjustbox}}{{width={adjustbox}\textwidth}}')
+        latex_table.insert(4, fr'\begin{{adjustbox}}{{width={adjustbox}\columnwidth}}')
         latex_table.insert(len(latex_table)-1, r'\end{adjustbox}')
         latex_table = '\n'.join(latex_table)
 
