@@ -23,9 +23,9 @@
     "workbench.colorTheme": "Catppuccin Noir High Contrast",
     "workbench.iconTheme": "catppuccin-mocha",
     "workbench.editor.showTabs": "none",
-    "workbench.layoutControl.enabled": false,
-    "workbench.editor.editorActionsLocation": "hidden",
-    "window.commandCenter": false,
+    // "workbench.layoutControl.enabled": false,
+    // "workbench.editor.editorActionsLocation": "hidden",
+    // "window.commandCenter": false,
     "breadcrumbs.enabled": false,
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "python-envs.pythonProjects": [
