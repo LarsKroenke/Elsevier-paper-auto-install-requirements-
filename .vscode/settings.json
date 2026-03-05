@@ -1,4 +1,5 @@
 {
+    // general editing setup
     "keyboard.layout": "de",
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
@@ -6,26 +7,39 @@
     "editor.wordWrap": "on",
     "editor.fontFamily": "Maple Mono NF, 'Maple Mono', Hack Nerd Font Mono, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
+    "editor.lineNumbers": "relative",
     // "python.defaultInterpreterPath": ".venv/bin/python",
     "python.linting.enabled": true,
+
+    // LaTeX configuration
     "latex-workshop.latex.autoBuild.run": "onSave",
-    "latex-workshop.intellisense.citation.backend": "biblatex",
+    "latex-workshop.intellisense.citation.backend": "bibtex",
+    "latex-workshop.kpsewhich.bibtex.enabled": true,
+    "latex-workshop.latex.bibDirs": ["/workspaces/Elsevier-paper-auto-install-requirements-/TeX"],
     "latex-workshop.latex.outDir": "%DIR%/~build",
+    "latex-workshop.view.pdf.zoom": "page-width",
     "latex-workshop.view.pdf.color.dark.backgroundColor": "#000000",
-    "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#000000",
     "latex-workshop.view.pdf.color.light.backgroundColor": "#000000",
+    // "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#1C1C1E",
+    // "latex-workshop.view.pdf.color.dark.pageColorsForeground": "#F2F2F0",
     "latex-workshop.message.error.show": false,
     "latex-workshop.bibtex-format.sort.enabled": true,
     "latex-workshop.intellisense.citation.filterText": [
         "title",
         "other fields"
     ],
-    "workbench.colorTheme": "Catppuccin Noir High Contrast",
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.linting.run": "onType",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "latex-workshop.view.pdf.invertMode.enabled": "always",
+    "latex-workshop.view.pdf.invert": 0.85,
+
+    "workbench.colorTheme": "Aura Dark",
     "workbench.iconTheme": "catppuccin-mocha",
     "workbench.editor.showTabs": "none",
-    // "workbench.layoutControl.enabled": false,
-    // "workbench.editor.editorActionsLocation": "hidden",
-    // "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.editor.editorActionsLocation": "hidden",
+    "window.commandCenter": false,
     "breadcrumbs.enabled": false,
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "python-envs.pythonProjects": [
@@ -52,5 +66,6 @@
     "git.enableStatusBarSync": false,
     "git.enabled": true,
     "debug.showInStatusBar": "never",
-    "latex-workshop.latex.build.rootfileInStatus": true
+    "latex-workshop.latex.build.rootfileInStatus": true,
+    "ltex.language": "de-DE"
 }
